@@ -41,14 +41,12 @@ class VCCW_MailCatcher {
 	private function setupMail( array $config )
 	{
 		add_action( 'phpmailer_init', function( $phpmailer ) use( $config ) {
-
 			extract( $config, EXTR_SKIP );
 
 			$phpmailer->Host     = $host;
 			$phpmailer->Port     = ( int ) $port;
 			$phpmailer->SMTPAuth = ( boolean ) $smtpauth;
 			$phpmailer->isSMTP();
-
 		} );
 	}
 }
