@@ -49,13 +49,6 @@ Then run a `composer` command.
 $ composer install
 ```
 
-## How to update libraries
-
-```
-$ composer update
-```
-
-
 ## How to development
 
 ```
