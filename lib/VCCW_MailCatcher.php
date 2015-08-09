@@ -5,7 +5,7 @@ if ( !defined( 'ABSPATH' ) ) die( header( 'HTTP/1.0 403 Forbidden' ) );
 /**
  * Mailcatcher class.
  *
- * @since 1.0
+ * @since 0.1.0
  * @package Mailcatcher
  */
 
@@ -14,7 +14,7 @@ class VCCW_MailCatcher {
 	/**
 	 * Send in arguments for mailer.
 	 *
-	 * @since 1.0
+	 * @since 0.1.0
 	 * @access public
 	 * @param array $config Configuration values. These will take presedence over $defaults.
 	 */
@@ -22,23 +22,19 @@ class VCCW_MailCatcher {
 	{
 		// Setup our defaults
 		$defaults = array(
-			"from"	   => "local@local.dev",
-			"fromname" => "local",
 			"host"     => "127.0.0.1",
 			"port"     => "1025",
 			"smtpauth" => false
 		 );
 
 		$config = wp_parse_args( $config, $defaults );
-
-		// Setup mailer
 		$this->setupMail( $config );
 	}
 
 	/**
 	 * Setup mailer.
 	 *
-	 * @since 1.0
+	 * @since 0.1.0
 	 * @access private
 	 * @param array $config Parsed configuration values.
 	 */
@@ -48,9 +44,6 @@ class VCCW_MailCatcher {
 
 			extract( $config, EXTR_SKIP );
 
-			$phpmailer->From     = $from;
-			$phpmailer->FromName = $fromname;
-			$phpmailer->Sender   = $phpmailer->From;
 			$phpmailer->Host     = $host;
 			$phpmailer->Port     = ( int ) $port;
 			$phpmailer->SMTPAuth = ( boolean ) $smtpauth;
@@ -61,10 +54,4 @@ class VCCW_MailCatcher {
 }
 
 
-$mailcatcher = new VCCW_MailCatcher( array(
-	"from"        => "dev@local.dev",
-	"fromname"    => "dev",
-	"host"     => "127.0.0.1",
-	"port"     => "1025",
-	"smtpauth" => false
-) );
+$mailcatcher = new VCCW_MailCatcher();
