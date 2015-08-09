@@ -1,6 +1,6 @@
 <?php
 
-if ( !defined( 'ABSPATH' ) ) die( header( 'HTTP/1.0 403 Forbidden' ) );
+if ( ! defined( 'ABSPATH' ) ) die( header( 'HTTP/1.0 403 Forbidden' ) );
 
 /**
  * Mailcatcher class.
@@ -9,8 +9,8 @@ if ( !defined( 'ABSPATH' ) ) die( header( 'HTTP/1.0 403 Forbidden' ) );
  * @package Mailcatcher
  */
 
-class VCCW_MailCatcher {
-
+class VCCW_MailCatcher
+{
 	/**
 	 * Send in arguments for mailer.
 	 *
