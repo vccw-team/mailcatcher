@@ -22,9 +22,6 @@ Plugin Name: mu-plugin for example.com
 require_once dirname( __FILE__ ) . '/vendor/autoload.php';
 ```
 
-That's it!
-
-
 ### Create a composer.json
 
 Create and place a composer.json into `muplugins/`.
