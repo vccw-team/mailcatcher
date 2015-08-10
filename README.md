@@ -11,7 +11,7 @@ http://mailcatcher.me/
 
 ### Place a plugin into mu-plugins
 
-Place a plugins into mu-plugins like following.
+Place a plugins into `wp-content/mu-plugins` like following.
 
 ```
 <?php
@@ -24,7 +24,7 @@ require_once dirname( __FILE__ ) . '/vendor/autoload.php';
 
 ### Create a composer.json
 
-Create and place a composer.json into `muplugins/`.
+Create and place a composer.json into `wp-content/mu-plugins`.
 
 ```
 {
