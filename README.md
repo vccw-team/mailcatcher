@@ -35,7 +35,7 @@ Create and place a composer.json into `wp-content/mu-plugins`.
             "email": "john@example.com"
         }
     ],
-    "require": {
+    "require-dev": {
         "vccw/mailcatcher": "*"
     }
 }
