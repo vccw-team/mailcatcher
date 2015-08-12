@@ -20,6 +20,10 @@ class VCCW_MailCatcher
 	 */
 	public function __construct( array $config = array() )
 	{
+		if ( ! defined( 'WP_DEBUG' ) || ! WP_DEBUG ) {
+			return;
+		}
+
 		// Setup our defaults
 		$defaults = array(
 			"host"     => "127.0.0.1",
