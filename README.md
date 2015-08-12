@@ -11,7 +11,7 @@ http://mailcatcher.me/
 
 ### Place a plugin into mu-plugins
 
-Place a plugins into mu-plugins like following.
+Place a plugins into `wp-content/mu-plugins` like following.
 
 ```
 <?php
@@ -22,12 +22,9 @@ Plugin Name: mu-plugin for example.com
 require_once dirname( __FILE__ ) . '/vendor/autoload.php';
 ```
 
-That's it!
-
-
 ### Create a composer.json
 
-Create and place a composer.json into `muplugins/`.
+Create and place a composer.json into `wp-content/mu-plugins`.
 
 ```
 {
@@ -51,13 +48,6 @@ Then run a `composer` command.
 ```
 $ composer install
 ```
-
-## How to update libraries
-
-```
-$ composer update
-```
-
 
 ## How to development
 
